@@ -1,4 +1,4 @@
-package boj.쇠막대기_10799;
+package boj.stack.쇠막대기_10799;
 
 import java.io.BufferedReader;
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package boj.괄호의값_2504;
+package boj.stack.괄호의값_2504;
 
 import java.io.BufferedReader;
 import java.io.IOException;
