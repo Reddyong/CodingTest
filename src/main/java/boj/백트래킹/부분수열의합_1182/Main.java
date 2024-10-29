@@ -17,26 +17,25 @@ public class Main {
     }
 
     private static void solve() {
-        for (int i = 0; i < N; i++) {
-            visited[i] = true;
-            recur(i, nums[i]);
+        recur(0, 0);
+
+        if (S == 0) {
+            ans--;
         }
 
         System.out.println(ans);
     }
 
-    private static void recur(int start, int sum) {
-        if (sum == S) {
-            ans++;
+    private static void recur(int cur, int sum) {
+        if (cur == N) {
+            if (sum == S) {
+                ans++;
+            }
+            return;
         }
 
-        for (int i = start + 1; i < N; i++) {
-            if (!visited[i]) {
-                visited[i] = true;
-                recur(i, sum + nums[i]);
-                visited[i] = false;
-            }
-        }
+        recur(cur + 1, sum);
+        recur(cur + 1, sum + nums[cur]);
     }
 
     private static void init() throws IOException {
