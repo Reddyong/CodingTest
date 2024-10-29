@@ -21,7 +21,7 @@ public class Main {
         for(int i = 0; i < N; i++){
             for(int j = 0; j < N; j++){
                 if(check[i][j] == 0 && board[i][j] == 1){
-                    bfs(i, j);
+                    dfs(i, j);
                 }
             }
         }
@@ -33,7 +33,7 @@ public class Main {
         }
     }
 
-    private static void bfs(int r, int c){
+    private static void dfs(int r, int c){
         Stack<Pos> stack = new Stack<>();
         stack.push(new Pos(r, c));
         check[r][c] = ans + 1;
