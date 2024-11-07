@@ -15,35 +15,25 @@ public class Main {
     }
 
     private static void solve() {
+        makeDpArr();
+
         for (int number : numbers) {
             ans = getResult(number);
             System.out.println(ans);
         }
     }
 
-    private static int getResult(int number) {
-        if (number == 1) {
-            return 1;
-        }
-
-        if (number == 2) {
-            return 2;
-        }
-
-        if (number == 3) {
-            return 4;
-        }
-
-        dp = new int[number + 1];
+    private static void makeDpArr() {
+        dp = new int[11];
         dp[1] = 1;
         dp[2] = 2;
         dp[3] = 4;
-
-
-        for (int i = 4; i < number + 1; i++) {
+        for (int i = 4; i < 11; i++) {
             dp[i] = dp[i - 1] + dp[i - 2] + dp[i - 3];
         }
+    }
 
+    private static int getResult(int number) {
         return dp[number];
     }
 
