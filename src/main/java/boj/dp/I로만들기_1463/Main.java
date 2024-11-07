@@ -13,21 +13,7 @@ public class Main {
     }
 
     private static void solve() {
-        if (N == 1) {
-            System.out.println(0);
-            return;
-        }
-
-        if (N == 2) {
-            System.out.println(1);
-            return;
-        }
-
-        if (N == 3) {
-            System.out.println(1);
-            return;
-        }
-        for (int i = 4; i < N + 1; i++) {
+        for (int i = 2; i < N + 1; i++) {
             if (i % 2 == 0 && i % 3 == 0) {
                 dp[i] = Math.min(Math.min(dp[i / 2], dp[i / 3]), dp[i - 1]) + 1;
                 continue;
@@ -48,9 +34,5 @@ public class Main {
         N = Integer.parseInt(br.readLine());
         dp = new int[N + 1];
 
-        if (N > 3) {
-            dp[2] = 1;
-            dp[3] = 1;
-        }
     }
 }
