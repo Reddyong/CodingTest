@@ -10,7 +10,7 @@ public class Main {
     static int M;
     static int[] nums;
     static int[][] sumNums;
-    static int[][] dp;
+    static int[] dp;
 
     public static void main(String[] args) throws IOException {
         init();
@@ -23,17 +23,14 @@ public class Main {
         for (int[] sumNum : sumNums) {
             int r = sumNum[0];
             int c = sumNum[1];
-            System.out.println(dp[r][c]);
+            int ans = dp[c] - dp[r - 1];
+            System.out.println(ans);
         }
     }
 
     private static void fillDP() {
-        for (int i = 2; i <= N; i++) {
-            int idx = 1;
-            for (int j = i; j <= N; j++) {
-                dp[idx][j] = nums[idx] + dp[idx + 1][j];
-                idx++;
-            }
+        for (int i = 1; i <= N; i++) {
+            dp[i] = dp[i - 1] + nums[i];
         }
     }
 
@@ -44,12 +41,11 @@ public class Main {
         M = Integer.parseInt(st.nextToken());
         nums = new int[N + 1];
         sumNums = new int[M][2];
-        dp = new int[N + 1][N + 1];
+        dp = new int[N + 1];
 
         st = new StringTokenizer(br.readLine());
         for (int i = 1; i <= N; i++) {
             nums[i] = Integer.parseInt(st.nextToken());
-            dp[i][i] = nums[i];
         }
 
         for (int i = 0; i < M; i++) {
