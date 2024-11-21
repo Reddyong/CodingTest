@@ -94,7 +94,7 @@ public class Main {
 //    static int ans;
 //    static int[][] notebook;
 //    static List<int[][]> stickers = new ArrayList<>();
-//    public static void Main(String[] args) throws IOException {
+//    public static void Solution(String[] args) throws IOException {
 //        init();
 //        solve();
 //    }
