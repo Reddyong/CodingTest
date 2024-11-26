@@ -30,6 +30,8 @@ public class Main {
             return false;
         }
 
+        // NOTE : i <= Math.sqrt(num) 를 사용하면 안된다.
+        //  이유는 실수계산이기 때문에 오차가 발생할 수 있다.
         for (int i = 2; i * i <= num; i++) {
             if (num % i == 0) {
                 return false;
