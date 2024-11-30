@@ -12,7 +12,6 @@ public class Main {
     static int N;
     static int x;
     static int y;
-    static int[][] calendar;
     static int[] arr;
     public static void main(String[] args) throws IOException {
         solve();
@@ -35,10 +34,6 @@ public class Main {
 
             int lcm = getLCM(M, N);
 
-            calendar = new int[M + 1][lcm / M];
-
-            makeCalendar(lcm);
-
             int ans = getResult(lcm);
 
             arr[i] = ans;
@@ -52,36 +47,24 @@ public class Main {
     }
 
     private static int getResult(int lcm) {
-        for (int i = 0; i < lcm / M; i++) {
-            if (calendar[x][i] == y) {
-                return M * i + x;
+        for (int i = x; i <= lcm; i += M) {
+            int mod1 = i % M;
+            int mod2 = i % N;
+
+            if (mod1 == 0) {
+                mod1 = M;
+            }
+
+            if (mod2 == 0) {
+                mod2 = N;
+            }
+
+            if (mod1 == x && mod2 == y) {
+                return i;
             }
         }
 
         return -1;
-    }
-
-    private static void makeCalendar(int lcm) {
-        int c = 0;
-        for (int i = 1; i <= lcm; i++) {
-            int r = i % M;
-            int num = i % N;
-
-            if (r == 0) {
-                r = M;
-            }
-
-            if (num == 0) {
-                num = N;
-            }
-
-            if (i % M == 1 && i != 1) {
-                c++;
-            }
-
-            calendar[r][c] = num;
-
-        }
     }
 
     private static int getLCM(int M, int N) {
