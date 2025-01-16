@@ -1,0 +1,38 @@
+package boj.해시.회사에있는사람_7785;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.*;
+
+public class Main {
+    private static int n;
+    private static List<String> ans = new ArrayList<>();
+    private static Map<String, String> map = new HashMap<>();
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        n = Integer.parseInt(br.readLine());
+
+        for (int i = 0; i < n; i++) {
+            StringTokenizer st = new StringTokenizer(br.readLine());
+
+            String name = st.nextToken();
+            String status = st.nextToken();
+
+            map.put(name, status);
+        }
+
+        for (String key : map.keySet()) {
+            if (map.get(key).equals("enter")) {
+                ans.add(key);
+            }
+        }
+
+        ans.sort((o1, o2) -> o2.compareTo(o1));
+
+        for (String a : ans) {
+            System.out.println(a);
+        }
+    }
+
+}
