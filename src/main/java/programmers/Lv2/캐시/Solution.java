@@ -1,6 +1,7 @@
 package programmers.Lv2.캐시;
 
-import java.util.*;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class Solution {
     int answer;
