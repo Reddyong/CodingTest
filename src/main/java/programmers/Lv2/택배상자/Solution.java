@@ -1,6 +1,6 @@
 package programmers.Lv2.택배상자;
 
-import java.util.*;
+import java.util.Stack;
 
 class Solution {
     private Stack<Integer> stack;
