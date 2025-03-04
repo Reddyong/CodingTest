@@ -1,6 +1,4 @@
-package programmers.Lv2.스티커모으기2;
-
-import java.util.*;
+package programmers.Lv3.스티커모으기2;
 
 class Solution {
     private int[] dp;
