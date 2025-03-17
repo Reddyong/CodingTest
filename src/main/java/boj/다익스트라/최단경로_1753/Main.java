@@ -1,4 +1,4 @@
-package boj.다익스트라.최단경로;
+package boj.다익스트라.최단경로_1753;
 
 import java.io.BufferedReader;
 import java.io.IOException;
