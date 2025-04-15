@@ -1,4 +1,4 @@
-package boj.dp.nx2타일링2;
+package boj.dp.nx2타일링2_11727;
 
 import java.util.Scanner;
 
