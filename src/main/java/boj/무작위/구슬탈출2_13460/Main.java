@@ -1,4 +1,4 @@
-package boj.구슬탈출2_13460;
+package boj.무작위.구슬탈출2_13460;
 
 import java.io.BufferedReader;
 import java.io.IOException;

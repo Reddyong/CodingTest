@@ -1,4 +1,4 @@
-package boj.시험감독_13458;
+package boj.무작위.시험감독_13458;
 
 import java.io.BufferedReader;
 import java.io.IOException;

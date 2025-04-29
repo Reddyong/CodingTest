@@ -1,4 +1,4 @@
-package boj.마법사상어와복제_23290;
+package boj.무작위.마법사상어와복제_23290;
 
 import java.io.BufferedReader;
 import java.io.IOException;

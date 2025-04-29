@@ -1,4 +1,4 @@
-package boj.주사위굴리기_14499;
+package boj.무작위.주사위굴리기_14499;
 
 import java.io.BufferedReader;
 import java.io.IOException;
