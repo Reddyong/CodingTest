@@ -16,6 +16,7 @@ public class Main {
     }
 
     private static void solve() {
+        // 플로이드 알고리즘으로 각 정점 간 최단거리 구하기
         for (int mid = 1; mid <= N; mid++) {
             for (int i = 1; i <= N; i++) {
                 for (int j = 1; j <= N; j++) {
@@ -24,6 +25,7 @@ public class Main {
             }
         }
 
+        // 도달 할 수 없는 정점은 0, 나머지는 최단 거리 출력
         StringBuilder sb = new StringBuilder();
         for (int i = 1; i <= N; i++) {
             for (int j = 1; j <= N; j++) {
