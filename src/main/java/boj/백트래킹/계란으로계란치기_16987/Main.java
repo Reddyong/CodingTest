@@ -1,9 +1,8 @@
-package boj.백트래킹.계란으로계란치기;
+package boj.백트래킹.계란으로계란치기_16987;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class Main {
